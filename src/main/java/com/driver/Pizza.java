@@ -22,7 +22,7 @@ public class Pizza {
         else{
             this.price = 400;
         }
-        this.bill = "Veg pizza base price: "+ this.price+"\n";
+        this.bill = "Base Price Of The Pizza: "+ this.price+"\n";
     }
 
     public int getPrice(){
