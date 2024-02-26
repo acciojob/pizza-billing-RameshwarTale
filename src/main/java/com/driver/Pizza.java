@@ -6,6 +6,8 @@ public class Pizza {
     private Boolean isVeg;
     private String bill;
 
+    boolean isBillGenerate = false;
+
     boolean isAddExtraCheese = false;
 
     boolean isAddExtraToppings = false;
@@ -61,18 +63,20 @@ public class Pizza {
         }
     }
 
-    public String getBill(){
+    public String getBill() {
 
-         if(isAddExtraCheese==true){
-             this.bill = this.bill+"Extra Cheese Added: "+80+"\n";
-         }
-         if(isAddExtraToppings){
-             this.bill = this.bill+"Extra Toppings Added: "+this.topping+"\n";
-         }
-         if(isAddTakeaway){
-             this.bill = this.bill+"Paperbag Added: "+20+"\n";
-         }
-         this.bill = this.bill+"Total Price: "+this.price+"\n";
+        if (isBillGenerate == false){
+            if (isAddExtraCheese == true) {
+                this.bill = this.bill + "Extra Cheese Added: " + 80 + "\n";
+            }
+        if (isAddExtraToppings) {
+            this.bill = this.bill + "Extra Toppings Added: " + this.topping + "\n";
+        }
+        if (isAddTakeaway) {
+            this.bill = this.bill + "Paperbag Added: " + 20 + "\n";
+        }
+        this.bill = this.bill + "Total Price: " + this.price + "\n";
+     }
         return this.bill;
     }
 }
